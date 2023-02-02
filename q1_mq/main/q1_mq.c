@@ -1,3 +1,5 @@
+/*Question 1: Message queue*/
+
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -38,7 +40,7 @@ void task3(void *data)
 }
 
 void task4(void *data)
-{
+{   // Sending integer data from task 4
     int int_data = 100;
     printf(" Task 4\n");
     while(1)
@@ -51,7 +53,7 @@ void task4(void *data)
 }
 
 void task5(void *data)
-{
+{   // Receiving integer data from task 5
     int buf = 0;
     int count = 0;
     printf(" Task 5\n");

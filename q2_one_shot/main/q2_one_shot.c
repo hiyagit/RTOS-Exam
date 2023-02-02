@@ -1,3 +1,5 @@
+/*Question 2: One Shot Timer*/
+
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -32,7 +34,7 @@ void timer_callback(TimerHandle_t one_shot_handle)
 }
 
 void task3(void *data)
-{
+{   // Triggering timer from task 3
 	while(1)
 	{
 		printf(" Task 3\n");
@@ -50,6 +52,12 @@ void task3(void *data)
 void app_main(void)
 {
     BaseType_t res_1, res_2, res_3;
+    
+    res_1 = xTaskCreate(task1,"first task", 2048, NULL, 5, &task1_handle);
+    if(res_1 == pdPASS)
+    {
+        printf("    Task 1 created successfully!!\n");
+    }
 
     res_3 = xTaskCreate(task3,"third task", 2048, NULL, 7, &task3_handle);
     if(res_3 == pdPASS)
@@ -61,11 +69,5 @@ void app_main(void)
     if(res_2 == pdPASS)
     {
         printf("    Task 2 created successfully!!\n");
-    }
-    
-    res_1 = xTaskCreate(task1,"first task", 2048, NULL, 5, &task1_handle);
-    if(res_1 == pdPASS)
-    {
-        printf("    Task 1 created successfully!!\n");
     }
 }
