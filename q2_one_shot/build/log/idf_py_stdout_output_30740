@@ -1,0 +1,18 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/training/Desktop/rtos_hiya_02/q2_one_shot/build/bootloader/esp-idf/esptool_py && /home/training/.espressif/python_env/idf5.1_py3.8_env/bin/python /home/training/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/training/Desktop/rtos_hiya_02/q2_one_shot/build/bootloader/bootloader.bin
+Bootloader binary size 0x6720 bytes. 0x8e0 bytes (8%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/q2_one_shot.c.obj
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Building C object CMakeFiles/q2_one_shot.elf.dir/project_elf_src_esp32.c.obj
+[8/10] Linking CXX executable q2_one_shot.elf
+[9/10] Generating binary image from built executable
+esptool.py v4.5.dev2
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/training/Desktop/rtos_hiya_02/q2_one_shot/build/q2_one_shot.bin
+[10/10] cd /home/training/Desktop/rtos_hiya_02/q2_one_shot/build/esp-idf/esptool_py && /home/training/.espressif/python_env/idf5.1_py3.8_env/bin/python /home/training/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/training/Desktop/rtos_hiya_02/q2_one_shot/build/partition_table/partition-table.bin /home/training/Desktop/rtos_hiya_02/q2_one_shot/build/q2_one_shot.bin
+q2_one_shot.bin binary size 0x28d20 bytes. Smallest app partition is 0x100000 bytes. 0xd72e0 bytes (84%) free.
